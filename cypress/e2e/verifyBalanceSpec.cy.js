@@ -46,8 +46,7 @@ describe('Verify balances after trancsactions', () => {
     cy.get('tbody tr').should('have.length', 3).each(($row) => {
       sum += parseInt($row.find('td').eq(1).text());
     }).then(() => {
-      //      expect(sum).to.be.equal(115);
-      expect(sum).to.be.equal(110);
+      expect(sum).to.be.equal(115);
     });
 
   });
