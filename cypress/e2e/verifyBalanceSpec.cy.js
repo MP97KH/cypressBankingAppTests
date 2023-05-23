@@ -33,6 +33,7 @@ describe('Verify balances after trancsactions', () => {
     //verify that total deposit balance is 115
     cy.contains('115').should('exist');
 
+    //----------Verify balances on transaction view-------------
     cy.wait(1000);
     //navigating to Transactions view
     cy.contains('Transactions').click();
@@ -45,8 +46,9 @@ describe('Verify balances after trancsactions', () => {
     cy.get('tbody tr').should('have.length', 3).each(($row) => {
       sum += parseInt($row.find('td').eq(1).text());
     }).then(() => {
+      //      expect(sum).to.be.equal(115);
       expect(sum).to.be.equal(115);
     });
-    
+
   });
 });
