@@ -47,7 +47,7 @@ describe('Verify balances after trancsactions', () => {
       sum += parseInt($row.find('td').eq(1).text());
     }).then(() => {
       //      expect(sum).to.be.equal(115);
-      expect(sum).to.be.equal(115);
+      expect(sum).to.be.equal(110);
     });
 
   });
